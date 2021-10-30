@@ -2,7 +2,7 @@
 	"name": "hook",
 	"displayName": "Hook",
 	"description": "Visual Studio Code support for Hook Programming Language",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"publisher": "fabiosvm",
 	"engines": {
 		"vscode": "^1.14.0"
@@ -35,6 +35,16 @@
 				"language": "hook",
 				"scopeName": "source.hook",
 				"path": "./syntaxes/hook.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "hook",
+				"path": "./snippets/builtin-functions.json"
+			},
+			{
+				"language": "hook",
+				"path": "./snippets/statements.json"
 			}
 		]
 	},

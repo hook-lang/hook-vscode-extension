@@ -1,0 +1,158 @@
+{
+	"print built-in function": {
+		"prefix": "print",
+		"body": [
+			"print(${1:value});"
+		]
+	},
+	"println built-in function": {
+		"prefix": "println",
+		"body": [
+			"println(${1:value});"
+		]
+	},
+	"type built-in function": {
+		"prefix": "type",
+		"body": [
+			"type(${1:value})"
+		]
+	},
+	"bool built-in function": {
+		"prefix": "bool",
+		"body": [
+			"bool(${1:value})"
+		]
+	},
+	"int built-in function": {
+		"prefix": "int",
+		"body": [
+			"int(${1:value})"
+		]
+	},
+	"float built-in function": {
+		"prefix": "float",
+		"body": [
+			"float(${1:value})"
+		]
+	},
+	"str built-in function": {
+		"prefix": "str",
+		"body": [
+			"str(${1:value})"
+		]
+	},
+	"ord built-in function": {
+		"prefix": "ord",
+		"body": [
+			"ord(${1:char})"
+		]
+	},
+	"chr built-in function": {
+		"prefix": "chr",
+		"body": [
+			"chr(${1:integer})"
+		]
+	},
+	"cap built-in function": {
+		"prefix": "cap",
+		"body": [
+			"cap(${1:value})"
+		]
+	},
+	"len built-in function": {
+		"prefix": "len",
+		"body": [
+			"len(${1:value})"
+		]
+	},
+	"is_empty built-in function": {
+		"prefix": "is_empty",
+		"body": [
+			"is_empty(${1:value})"
+		]
+	},
+	"hash built-in function": {
+		"prefix": "hash",
+		"body": [
+			"hash(${1:string})"
+		]
+	},
+	"compare built-in function": {
+		"prefix": "compare",
+		"body": [
+			"compare(${1:value}, ${2:value})"
+		]
+	},
+	"lower built-in function": {
+		"prefix": "lower",
+		"body": [
+			"lower(${1:string})"
+		]
+	},
+	"upper built-in function": {
+		"prefix": "upper",
+		"body": [
+			"upper(${1:string})"
+		]
+	},
+	"trim built-in function": {
+		"prefix": "trim",
+		"body": [
+			"trim(${1:string})"
+		]
+	},
+	"slice built-in function": {
+		"prefix": "slice",
+		"body": [
+			"slice(${1:value}, ${2:start}, ${3:stop})"
+		]
+	},
+	"split built-in function": {
+		"prefix": "split",
+		"body": [
+			"split(${1:string}, \"${2:separator}\")"
+		]
+	},
+	"join built-in function": {
+		"prefix": "join",
+		"body": [
+			"join(${1:array}, \"${2:separator}\")"
+		]
+	},
+	"array built-in function": {
+		"prefix": "array",
+		"body": [
+			"array(${1:capacity})"
+		]
+	},
+	"index_of built-in function": {
+		"prefix": "index_of",
+		"body": [
+			"index_of(${1:array}, ${2:element})"
+		]
+	},
+	"sleep built-in function": {
+		"prefix": "sleep",
+		"body": [
+			"sleep(${1:ms});"
+		]
+	},
+	"assert built-in function": {
+		"prefix": "assert",
+		"body": [
+			"assert(${1:assertion}, \"${2:message}\");"
+		]
+	},
+	"panic built-in function": {
+		"prefix": "panic",
+		"body": [
+			"panic(\"${1:message}\");"
+		]
+	},
+	"require built-in function": {
+		"prefix": "require",
+		"body": [
+			"require(\"${1:library}\")"
+		]
+	}
+}

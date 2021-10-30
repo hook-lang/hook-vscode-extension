@@ -75,7 +75,7 @@
 			"name": "constant.language.hook"
 		},
 		{
-			"match": "(?<![^.]\\.|:)\\b(print|println|type|boo|int|float|str|ord|chr|cap|len|is_empty|hash|compare|lower|upper|array|index_of|assert|panic|require)\\b(?=\\s*(?:[({\"']|\\[\\[))",
+			"match": "(?<![^.]\\.|:)\\b(print|println|type|bool|int|float|str|ord|chr|cap|len|is_empty|hash|compare|lower|upper|trim|slice|split|join|array|index_of|sleep|assert|panic|require)\\b(?=\\s*(?:[({\"']|\\[\\[))",
 			"name": "support.function.hook"
 		},
 		{

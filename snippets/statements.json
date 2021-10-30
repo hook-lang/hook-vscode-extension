@@ -1,0 +1,149 @@
+{
+	"variable declaration": {
+		"prefix": "let",
+		"body": [
+			"let ${1:name} = ${2:expression};",
+		]
+	},
+	"multable variables": {
+		"prefix": "letm",
+		"body": [
+			"let mut ${1:name} = ${2:expression};"
+		]
+	},
+	"unpacking": {
+		"prefix": "let[",
+		"body": [
+			"let [ ${1:name}, ${2:...} ] = ${3:expression};"
+		]
+	},
+	"destructuring": {
+		"prefix": "let{",
+		"body": [
+			"let { ${1:name}, ${2:...} } = ${3:expression};"
+		]
+	},
+	"struct declaration": {
+		"prefix": "struct",
+		"body": [
+			"struct ${1:name} {",
+			"  ${2:field},",
+			"  ${3:...}",
+			"}"
+		]
+	},
+	"anonymous struct": {
+		"prefix": "structa",
+		"body": [
+			"struct {",
+			"  ${1:field},",
+			"  ${2:...}",
+			"}"
+		]
+	},
+	"function declaration": {
+		"prefix": "fn",
+		"body": [
+			"fn ${1:name} (${2:param}, ${3:...}) {",
+			"  ${4:statement};",
+			"  ${5:...}",
+			"}"
+		]
+	},
+	"anonymous function": {
+		"prefix": "fna",
+		"body": [
+			"fn (${1:param}, ${2:...}) {",
+			"  ${3:statement};",
+			"  ${4:...}",
+			"}"
+		]
+	},
+	"delete statement": {
+		"prefix": "del",
+		"body": [
+			"delete ${1:name}[${2:expression}];"
+		]
+	},
+	"if statement": {
+		"prefix": "if",
+		"body": [
+			"if (${1:expression}) {",
+			"  ${2:statement};",
+			"  ${3:...}",
+			"}"
+		]
+	},
+	"if-else statement": {
+		"prefix": "ifel",
+		"body": [
+			"if (${1:expression}) {",
+			"  ${2:statement};",
+			"  ${3:...}",
+			"} else {",
+			"  ${4:statement};",
+			"  ${5:...}",
+			"}"
+		]
+	},
+	"if expression": {
+		"prefix": "ife",
+		"body": [
+			"if (${1:expression}) ${2:expression} else ${3:expression}"
+		]
+	},
+	"loop statement": {
+		"prefix": "loop",
+		"body": [
+			"loop {",
+			"  ${1:statement};",
+			"  ${2:...}",
+			"}"
+		]
+	},
+	"while statement": {
+		"prefix": "while",
+		"body": [
+			"while (${1:expression}) {",
+			"  ${2:statement};",
+			"  ${3:...}",
+			"}"
+		]
+	},
+	"do-while statement": {
+		"prefix": "do",
+		"body": [
+			"do {",
+			"  ${1:statement};",
+			"  ${2:...}",
+			"} while (${3:expression});"
+		]
+	},
+	"for statement": {
+		"prefix": "for",
+		"body": [
+			"for (let mut i = ${1:0}; i < ${2:n}; ${3:i++}) {",
+			"  ${4:statement};",
+			"  ${5:...}",
+			"}"
+		]
+	},
+	"continue": {
+		"prefix": "co",
+		"body": [
+			"continue;",
+		]
+	},
+	"break": {
+		"prefix": "br",
+		"body": [
+			"break;",
+		]
+	},
+	"return": {
+		"prefix": "ret",
+		"body": [
+			"return ${1:expression};",
+		]
+	}
+}
