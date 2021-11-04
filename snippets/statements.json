@@ -1,23 +1,35 @@
 {
+	"constant declaration": {
+		"prefix": "const",
+		"body": [
+			"const ${1:name} = ${2:expression};"
+		]
+	},
+	"unpacking to constant": {
+		"prefix": "const[",
+		"body": [
+			"const [ ${1:name}, ${2:...} ] = ${3:expression};"
+		]
+	},
+	"destructuring to constant": {
+		"prefix": "const{",
+		"body": [
+			"const { ${1:name}, ${2:...} } = ${3:expression};"
+		]
+	},
 	"variable declaration": {
 		"prefix": "let",
 		"body": [
-			"let ${1:name} = ${2:expression};",
+			"let ${1:name} = ${2:expression};"
 		]
 	},
-	"multable variables": {
-		"prefix": "letm",
-		"body": [
-			"let mut ${1:name} = ${2:expression};"
-		]
-	},
-	"unpacking": {
+	"unpacking to variable": {
 		"prefix": "let[",
 		"body": [
 			"let [ ${1:name}, ${2:...} ] = ${3:expression};"
 		]
 	},
-	"destructuring": {
+	"destructuring to variable": {
 		"prefix": "let{",
 		"body": [
 			"let { ${1:name}, ${2:...} } = ${3:expression};"
@@ -122,7 +134,7 @@
 	"for statement": {
 		"prefix": "for",
 		"body": [
-			"for (let mut i = ${1:0}; i < ${2:n}; ${3:i++}) {",
+			"for (let i = ${1:0}; i < ${2:n}; ${3:i++}) {",
 			"  ${4:statement};",
 			"  ${5:...}",
 			"}"

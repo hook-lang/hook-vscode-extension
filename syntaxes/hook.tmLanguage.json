@@ -12,6 +12,27 @@
 			"name": "constant.numeric.float.hook"
 		},
 		{
+			"begin": "'",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.hook"
+				}
+			},
+			"end": "'",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.hook"
+				}
+			},
+			"name": "string.quoted.single.hook",
+			"patterns": [
+				{
+					"include": "#escaped_char"
+				}
+			]
+		},
+
+		{
 			"begin": "\"",
 			"beginCaptures": {
 				"0": {
@@ -31,6 +52,7 @@
 				}
 			]
 		},
+
 		{
 			"captures": {
 				"1": {
@@ -67,7 +89,7 @@
 			]
 		},
 		{
-			"match": "\\b(break|continue|delete|do|else|fn|for|if|let|loop|mut|return|struct|while)\\b",
+			"match": "\\b(break|const|continue|delete|do|else|fn|for|if|let|loop|return|struct|while)\\b",
 			"name": "keyword.control.hook"
 		},		
 		{
