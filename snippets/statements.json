@@ -1,4 +1,22 @@
 {
+	"use declaration": {
+		"prefix": "use",
+		"body": [
+			"use ${1:name};"
+		]
+	},
+	"use-as declaration": {
+		"prefix": "usea",
+		"body": [
+			"use ${1:name} as ${2:name};"
+		]
+	},
+	"destructured use declaration": {
+		"prefix": "use{",
+		"body": [
+			"use { ${1:name} } in ${2:name};"
+		]
+	},
 	"constant declaration": {
 		"prefix": "const",
 		"body": [
@@ -8,13 +26,13 @@
 	"unpacking to constant": {
 		"prefix": "const[",
 		"body": [
-			"const [ ${1:name}, ${2:...} ] = ${3:expression};"
+			"const [ ${1:name} ] = ${2:expression};"
 		]
 	},
 	"destructuring to constant": {
 		"prefix": "const{",
 		"body": [
-			"const { ${1:name}, ${2:...} } = ${3:expression};"
+			"const { ${1:name} } = ${2:expression};"
 		]
 	},
 	"variable declaration": {
@@ -26,13 +44,13 @@
 	"unpacking to variable": {
 		"prefix": "let[",
 		"body": [
-			"let [ ${1:name}, ${2:...} ] = ${3:expression};"
+			"let [ ${1:name} ] = ${2:expression};"
 		]
 	},
 	"destructuring to variable": {
 		"prefix": "let{",
 		"body": [
-			"let { ${1:name}, ${2:...} } = ${3:expression};"
+			"let { ${1:name} } = ${2:expression};"
 		]
 	},
 	"struct declaration": {
@@ -40,7 +58,6 @@
 		"body": [
 			"struct ${1:name} {",
 			"  ${2:field},",
-			"  ${3:...}",
 			"}"
 		]
 	},
@@ -49,25 +66,22 @@
 		"body": [
 			"struct {",
 			"  ${1:field},",
-			"  ${2:...}",
 			"}"
 		]
 	},
 	"function declaration": {
 		"prefix": "fn",
 		"body": [
-			"fn ${1:name} (${2:param}, ${3:...}) {",
-			"  ${4:statement};",
-			"  ${5:...}",
+			"fn ${1:name} (${2:param}) {",
+			"  ${3:statement};",
 			"}"
 		]
 	},
 	"anonymous function": {
 		"prefix": "fna",
 		"body": [
-			"fn (${1:param}, ${2:...}) {",
-			"  ${3:statement};",
-			"  ${4:...}",
+			"fn (${1:param}) {",
+			"  ${2:statement};",
 			"}"
 		]
 	},
@@ -82,7 +96,6 @@
 		"body": [
 			"if (${1:expression}) {",
 			"  ${2:statement};",
-			"  ${3:...}",
 			"}"
 		]
 	},
@@ -91,10 +104,8 @@
 		"body": [
 			"if (${1:expression}) {",
 			"  ${2:statement};",
-			"  ${3:...}",
 			"} else {",
-			"  ${4:statement};",
-			"  ${5:...}",
+			"  ${3:statement};",
 			"}"
 		]
 	},
@@ -109,7 +120,6 @@
 		"body": [
 			"loop {",
 			"  ${1:statement};",
-			"  ${2:...}",
 			"}"
 		]
 	},
@@ -118,7 +128,6 @@
 		"body": [
 			"while (${1:expression}) {",
 			"  ${2:statement};",
-			"  ${3:...}",
 			"}"
 		]
 	},
@@ -127,8 +136,7 @@
 		"body": [
 			"do {",
 			"  ${1:statement};",
-			"  ${2:...}",
-			"} while (${3:expression});"
+			"} while (${2:expression});"
 		]
 	},
 	"for statement": {
@@ -136,26 +144,31 @@
 		"body": [
 			"for (let i = ${1:0}; i < ${2:n}; ${3:i++}) {",
 			"  ${4:statement};",
-			"  ${5:...}",
 			"}"
 		]
 	},
 	"continue": {
 		"prefix": "co",
 		"body": [
-			"continue;",
+			"continue;"
 		]
 	},
 	"break": {
 		"prefix": "br",
 		"body": [
-			"break;",
+			"break;"
 		]
 	},
 	"return": {
 		"prefix": "ret",
 		"body": [
-			"return ${1:expression};",
+			"return ${1:expression};"
+		]
+	},
+	"return null": {
+		"prefix": "ret;",
+		"body": [
+			"return;"
 		]
 	}
 }

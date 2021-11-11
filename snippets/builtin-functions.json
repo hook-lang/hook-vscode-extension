@@ -71,34 +71,28 @@
 			"is_empty(${1:value})"
 		]
 	},
-	"hash built-in function": {
-		"prefix": "hash",
-		"body": [
-			"hash(${1:string})"
-		]
-	},
 	"compare built-in function": {
 		"prefix": "compare",
 		"body": [
 			"compare(${1:value}, ${2:value})"
 		]
 	},
-	"lower built-in function": {
-		"prefix": "lower",
+	"min built-in function": {
+		"prefix": "min",
 		"body": [
-			"lower(${1:string})"
+			"min(${1:value})"
 		]
 	},
-	"upper built-in function": {
-		"prefix": "upper",
+	"max built-in function": {
+		"prefix": "max",
 		"body": [
-			"upper(${1:string})"
+			"max(${1:value})"
 		]
 	},
-	"trim built-in function": {
-		"prefix": "trim",
+	"sum built-in function": {
+		"prefix": "sum",
 		"body": [
-			"trim(${1:string})"
+			"sum(${1:value})"
 		]
 	},
 	"slice built-in function": {
@@ -147,12 +141,6 @@
 		"prefix": "panic",
 		"body": [
 			"panic(\"${1:message}\");"
-		]
-	},
-	"require built-in function": {
-		"prefix": "require",
-		"body": [
-			"require(\"${1:library}\")"
 		]
 	}
 }
