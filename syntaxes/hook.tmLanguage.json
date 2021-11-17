@@ -4,12 +4,8 @@
     "uuid": "9cf1ac87-6899-4ef6-9166-854fac15e2f6",
 	"patterns": [
 		{
-			"match": "(?<![\\w\\d.])\\d+(?![pPeE.0-9])",
-			"name": "constant.numeric.integer.hook"
-		},
-		{
-			"match": "(?<![\\w\\d.])\\d+(\\.\\d+)?([eE]-?\\d*)?",
-			"name": "constant.numeric.float.hook"
+			"match": "(?x)-?(?:0|[1-9]\\d*)(?:(?:\\.\\d+)?(?:[eE][+-]?\\d+)?)?",
+			"name": "constant.numeric.hook"
 		},
 		{
 			"begin": "'",
