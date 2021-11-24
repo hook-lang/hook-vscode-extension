@@ -77,24 +77,6 @@
 			"compare(${1:value}, ${2:value})"
 		]
 	},
-	"min built-in function": {
-		"prefix": "min",
-		"body": [
-			"min(${1:value})"
-		]
-	},
-	"max built-in function": {
-		"prefix": "max",
-		"body": [
-			"max(${1:value})"
-		]
-	},
-	"sum built-in function": {
-		"prefix": "sum",
-		"body": [
-			"sum(${1:value})"
-		]
-	},
 	"slice built-in function": {
 		"prefix": "slice",
 		"body": [
@@ -111,18 +93,6 @@
 		"prefix": "join",
 		"body": [
 			"join(${1:array}, \"${2:separator}\")"
-		]
-	},
-	"array built-in function": {
-		"prefix": "array",
-		"body": [
-			"array(${1:capacity})"
-		]
-	},
-	"index_of built-in function": {
-		"prefix": "index_of",
-		"body": [
-			"index_of(${1:array}, ${2:element})"
 		]
 	},
 	"sleep built-in function": {

@@ -5,7 +5,7 @@
 			"use ${1:name};"
 		]
 	},
-	"use-as declaration": {
+	"use..as declaration": {
 		"prefix": "usea",
 		"body": [
 			"use ${1:name} as ${2:name};"
@@ -99,7 +99,7 @@
 			"}"
 		]
 	},
-	"if-else statement": {
+	"if..else statement": {
 		"prefix": "ifel",
 		"body": [
 			"if (${1:expression}) {",
@@ -113,6 +113,32 @@
 		"prefix": "ife",
 		"body": [
 			"if (${1:expression}) ${2:expression} else ${3:expression}"
+		]
+	},
+	"match statement": {
+		"prefix": "match",
+		"body": [
+			"match (${1:expression}) {",
+			"  ${2:expression} => ${3:statement};",
+			"}"
+		]
+	},
+	"match.._ statement": {
+		"prefix": "match_",
+		"body": [
+			"match (${1:expression}) {",
+			"  ${2:expression} => ${3:statement};",
+			"  _ => ${4:statement};",
+			"}"
+		]
+	},
+	"match expression": {
+		"prefix": "matche",
+		"body": [
+			"match (${1:expression}) {",
+			"  ${2:expression} => ${3:expression},",
+			"  _ => ${4:expression}",
+			"}"
 		]
 	},
 	"loop statement": {
@@ -131,7 +157,7 @@
 			"}"
 		]
 	},
-	"do-while statement": {
+	"do..while statement": {
 		"prefix": "do",
 		"body": [
 			"do {",
