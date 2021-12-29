@@ -89,7 +89,7 @@
 			"name": "keyword.control.hook"
 		},		
 		{
-			"match": "(?<![^.]\\.|:)\\b(null|false|true)\\b|(?<![.])\\.{3}(?!\\.)",
+			"match": "(?<![^.]\\.|:)\\b(nil|false|true)\\b|(?<![.])\\.{3}(?!\\.)",
 			"name": "constant.language.hook"
 		},
 		{

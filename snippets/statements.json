@@ -191,7 +191,7 @@
 			"return ${1:expression};"
 		]
 	},
-	"return null": {
+	"return nil": {
 		"prefix": "ret;",
 		"body": [
 			"return;"
