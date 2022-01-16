@@ -18,39 +18,39 @@
 		]
 	},
 	"constant declaration": {
-		"prefix": "const",
-		"body": [
-			"const ${1:name} = ${2:expression};"
-		]
-	},
-	"unpacking to constant": {
-		"prefix": "const[",
-		"body": [
-			"const [ ${1:name} ] = ${2:expression};"
-		]
-	},
-	"destructuring to constant": {
-		"prefix": "const{",
-		"body": [
-			"const { ${1:name} } = ${2:expression};"
-		]
-	},
-	"variable declaration": {
 		"prefix": "let",
 		"body": [
 			"let ${1:name} = ${2:expression};"
 		]
 	},
-	"unpacking to variable": {
+	"unpacking to constant": {
 		"prefix": "let[",
 		"body": [
 			"let [ ${1:name} ] = ${2:expression};"
 		]
 	},
-	"destructuring to variable": {
+	"destructuring to constant": {
 		"prefix": "let{",
 		"body": [
 			"let { ${1:name} } = ${2:expression};"
+		]
+	},
+	"variable declaration": {
+		"prefix": "var",
+		"body": [
+			"var ${1:name} = ${2:expression};"
+		]
+	},
+	"unpacking to variable": {
+		"prefix": "var[",
+		"body": [
+			"var [ ${1:name} ] = ${2:expression};"
+		]
+	},
+	"destructuring to variable": {
+		"prefix": "var{",
+		"body": [
+			"var { ${1:name} } = ${2:expression};"
 		]
 	},
 	"struct declaration": {
@@ -78,17 +78,29 @@
 		]
 	},
 	"anonymous function": {
-		"prefix": "fna",
+		"prefix": "fn(",
 		"body": [
 			"fn (${1:param}) {",
 			"  ${2:statement};",
 			"}"
 		]
 	},
-	"delete statement": {
+	"arrow function declaration": {
+		"prefix": "fn=>",
+		"body": [
+			"fn ${1:name} (${2:param}) => ${3:expression}"
+		]
+	},
+	"anonymous arrow function": {
+		"prefix": "fn(=>",
+		"body": [
+			"fn (${1:param}) => ${2:expression}"
+		]
+	},
+	"del statement": {
 		"prefix": "del",
 		"body": [
-			"delete ${1:name}[${2:expression}];"
+			"del ${1:name}[${2:expression}];"
 		]
 	},
 	"if statement": {
@@ -168,7 +180,7 @@
 	"for statement": {
 		"prefix": "for",
 		"body": [
-			"for (let i = ${1:0}; i < ${2:n}; ${3:i++}) {",
+			"for (var i = ${1:0}; i < ${2:n}; ${3:i++}) {",
 			"  ${4:statement};",
 			"}"
 		]
