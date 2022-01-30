@@ -18,21 +18,21 @@
 		]
 	},
 	"constant declaration": {
-		"prefix": "let",
+		"prefix": "val",
 		"body": [
-			"let ${1:name} = ${2:expression};"
+			"val ${1:name} = ${2:expression};"
 		]
 	},
 	"unpacking to constant": {
-		"prefix": "let[",
+		"prefix": "val[",
 		"body": [
-			"let [ ${1:name} ] = ${2:expression};"
+			"val [ ${1:name} ] = ${2:expression};"
 		]
 	},
 	"destructuring to constant": {
-		"prefix": "let{",
+		"prefix": "val{",
 		"body": [
-			"let { ${1:name} } = ${2:expression};"
+			"val { ${1:name} } = ${2:expression};"
 		]
 	},
 	"variable declaration": {
