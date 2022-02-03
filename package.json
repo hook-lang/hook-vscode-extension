@@ -2,7 +2,8 @@
 	"name": "hook",
 	"displayName": "Hook",
 	"description": "Visual Studio Code support for Hook Programming Language",
-	"version": "0.1.11",
+	"icon": "images/hook-file-extension.png",
+	"version": "0.1.12",
 	"publisher": "fabiosvm",
 	"engines": {
 		"vscode": "^1.14.0"
@@ -13,7 +14,7 @@
 	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/fabiosvm/hook-vs-code"
+		"url": "https://github.com/fabiosvm/hook-vscode-extension"
 	},
 	"contributes": {
 		"languages": [
