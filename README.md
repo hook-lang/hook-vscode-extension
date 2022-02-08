@@ -24,4 +24,5 @@ This extension provides the following features:
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is released under [MIT](https://choosealicense.com/licenses/mit/) license.
+See [LICENSE](https://github.com/fabiosvm/hook/blob/main/LICENSE) for more details.
