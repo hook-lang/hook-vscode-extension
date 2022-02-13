@@ -8,6 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.14] - 2022-02-12
+
+### Added
+
+- Snippets for built-in functions integer(), hex(), and bin()
+
+### Changed
+
+- Renamed built-in function float() to num()
+
 ## [0.1.13] - 2022-02-12
 
 ### Changed

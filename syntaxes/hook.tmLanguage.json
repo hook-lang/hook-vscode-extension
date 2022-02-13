@@ -93,7 +93,7 @@
 			"name": "constant.language.hook"
 		},
 		{
-			"match": "(?<![^.]\\.|:)\\b(print|println|type|bool|int|float|str|ord|chr|cap|len|is_empty|compare|slice|split|join|sleep|assert|panic)\\b(?=\\s*(?:[({\"']|\\[\\[))",
+			"match": "(?<![^.]\\.|:)\\b(print|println|type|bool|integer|int|num|str|ord|chr|hex|bin|cap|len|is_empty|compare|slice|split|join|sleep|assert|panic)\\b(?=\\s*(?:[({\"']|\\[\\[))",
 			"name": "support.function.hook"
 		},
 		{

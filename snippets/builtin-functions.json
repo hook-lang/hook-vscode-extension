@@ -23,16 +23,22 @@
 			"bool(${1:value})"
 		]
 	},
+	"integer built-in function": {
+		"prefix": "inte",
+		"body": [
+			"integer(${1:value})"
+		]
+	},
 	"int built-in function": {
 		"prefix": "int",
 		"body": [
 			"int(${1:value})"
 		]
 	},
-	"float built-in function": {
-		"prefix": "float",
+	"num built-in function": {
+		"prefix": "num",
 		"body": [
-			"float(${1:value})"
+			"num(${1:value})"
 		]
 	},
 	"str built-in function": {
@@ -51,6 +57,18 @@
 		"prefix": "chr",
 		"body": [
 			"chr(${1:integer})"
+		]
+	},
+	"hex built-in function": {
+		"prefix": "hex",
+		"body": [
+			"hex(${1:string})"
+		]
+	},
+	"bin built-in function": {
+		"prefix": "bin",
+		"body": [
+			"bin(${1:string})"
 		]
 	},
 	"cap built-in function": {
