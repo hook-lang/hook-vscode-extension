@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.13] - 2022-02-12
+
+### Changed
+
+- The default hook file extension is now .hk
+
 ## [0.1.12] - 2022-02-02
 
 ### Added
