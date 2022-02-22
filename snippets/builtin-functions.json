@@ -113,6 +113,30 @@
 			"join(${1:array}, \"${2:separator}\")"
 		]
 	},
+	"iter built-in function": {
+		"prefix": "it",
+		"body": [
+			"iter(${1:iterable})"
+		]
+	},
+	"valid built-in function": {
+		"prefix": "valid",
+		"body": [
+			"valid(${1:iterator})"
+		]
+	},
+	"current built-in function": {
+		"prefix": "curr",
+		"body": [
+			"current(${1:iterator})"
+		]
+	},
+	"next built-in function": {
+		"prefix": "next",
+		"body": [
+			"next(${1:iterator})"
+		]
+	},	
 	"sleep built-in function": {
 		"prefix": "sleep",
 		"body": [

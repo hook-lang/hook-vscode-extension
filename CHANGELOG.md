@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.15] - 2022-02-22
+
+### Added
+
+- Snippets for built-in functions iter(), valid(), current(), and next()
+- Snippets for core modules importing
+
 ## [0.1.14] - 2022-02-12
 
 ### Added

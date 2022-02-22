@@ -17,6 +17,36 @@
 			"use { ${1:name} } in ${2:name};"
 		]
 	},
+	"use math declaration": {
+		"prefix": "usem",
+		"body": [
+			"use math;"
+		]
+	},
+	"use os declaration": {
+		"prefix": "useos",
+		"body": [
+			"use os;"
+		]
+	},
+	"use io declaration": {
+		"prefix": "useio",
+		"body": [
+			"use io;"
+		]
+	},
+	"use strings declaration": {
+		"prefix": "usestr",
+		"body": [
+			"use strings;"
+		]
+	},
+	"use arrays declaration": {
+		"prefix": "usearr",
+		"body": [
+			"use arrays;"
+		]
+	},
 	"constant declaration": {
 		"prefix": "val",
 		"body": [
