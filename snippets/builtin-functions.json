@@ -17,34 +17,28 @@
 			"type(${1:value})"
 		]
 	},
-	"bool built-in function": {
-		"prefix": "bool",
+	"to_bool built-in function": {
+		"prefix": "tob",
 		"body": [
-			"bool(${1:value})"
+			"to_bool(${1:value})"
 		]
 	},
-	"integer built-in function": {
-		"prefix": "inte",
+	"to_int built-in function": {
+		"prefix": "toi",
 		"body": [
-			"integer(${1:value})"
+			"to_int(${1:value})"
 		]
 	},
-	"int built-in function": {
-		"prefix": "int",
+	"to_float built-in function": {
+		"prefix": "tof",
 		"body": [
-			"int(${1:value})"
+			"to_float(${1:value})"
 		]
 	},
-	"num built-in function": {
-		"prefix": "num",
+	"to_string built-in function": {
+		"prefix": "tos",
 		"body": [
-			"num(${1:value})"
-		]
-	},
-	"str built-in function": {
-		"prefix": "str",
-		"body": [
-			"str(${1:value})"
+			"to_string(${1:value})"
 		]
 	},
 	"ord built-in function": {

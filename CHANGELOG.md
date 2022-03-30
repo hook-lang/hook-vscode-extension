@@ -6,7 +6,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.1.16] - 2022-03-30
+
+### Changed
+
+- Renamed built-in functions: bool() to to_bool(), int() to to_int(), num() to to_float(), and str() to to_string()
+
+### Removed
+
+- Removed built-in function: integer()
 
 ## [0.1.15] - 2022-02-22
 

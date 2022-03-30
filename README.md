@@ -5,7 +5,7 @@ Visual Studio Code support for Hook Programming Language.
 
 ## What is Hook?
 
-Hook is a simple, small, cross-platform, dynamically typed scripting language that combines imperative and functional programming.
+Hook is an imperative, cross-platform, dynamically typed scripting language based on the mutable value semantics approach.
 
 See more about Hook on [GitHub](https://github.com/fabiosvm/hook-lang).
 
