@@ -14,7 +14,7 @@
 	"destructured use declaration": {
 		"prefix": "use{",
 		"body": [
-			"use { ${1:name} } in ${2:name};"
+			"use { ${1:name} } from ${2:name};"
 		]
 	},
 	"use math declaration": {
