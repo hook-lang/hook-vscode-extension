@@ -1,0 +1,314 @@
+{
+	"Pi constant": {
+		"prefix": "pi",
+		"body": [
+			"Pi"
+		]
+	},
+	"abs core module function": {
+		"prefix": "abs",
+		"body": [
+			"abs(${1:value})"
+		]
+	},
+	"sin core module function": {
+		"prefix": "sin",
+		"body": [
+			"sin(${1:value});"
+		]
+	},
+	"cos core module function": {
+		"prefix": "cos",
+		"body": [
+			"cos(${1:value})"
+		]
+	},
+	"tan core module function": {
+		"prefix": "tan",
+		"body": [
+			"tan(${1:value})"
+		]
+	},
+	"asin core module function": {
+		"prefix": "asin",
+		"body": [
+			"asin(${1:value})"
+		]
+	},
+	"acos core module function": {
+		"prefix": "acos",
+		"body": [
+			"acos(${1:value})"
+		]
+	},
+	"atan core module function": {
+		"prefix": "atan",
+		"body": [
+			"atan(${1:value})"
+		]
+	},
+	"floor core module function": {
+		"prefix": "flo",
+		"body": [
+			"floor(${1:float})"
+		]
+	},
+	"ceil core module function": {
+		"prefix": "cei",
+		"body": [
+			"ceil(${1:int})"
+		]
+	},
+	"round core module function": {
+		"prefix": "rou",
+		"body": [
+			"round(${1:string})"
+		]
+	},
+	"pow core module function": {
+		"prefix": "pow",
+		"body": [
+			"pow(${1:base}, ${2:power})"
+		]
+	},
+	"sqrt core module function": {
+		"prefix": "sqrt",
+		"body": [
+			"sqrt(${1:value})"
+		]
+	},
+	"log core module function": {
+		"prefix": "log",
+		"body": [
+			"log(${1:value})"
+		]
+	},
+	"exp core module function": {
+		"prefix": "exp",
+		"body": [
+			"exp(${1:value})"
+		]
+	},
+	"random core module function": {
+		"prefix": "rand",
+		"body": [
+			"random()"
+		]
+	},
+	"ClocksPerSecond constant": {
+		"prefix": "clocks",
+		"body": [
+			"ClocksPerSecond"
+		]
+	},
+	"clock core module function": {
+		"prefix": "clo",
+		"body": [
+			"clock()"
+		]
+	},
+	"time core module function": {
+		"prefix": "time",
+		"body": [
+			"time()"
+		]
+	},
+	"system core module function": {
+		"prefix": "sys",
+		"body": [
+			"system(${1:command})"
+		]
+	},
+	"getenv core module function": {
+		"prefix": "getenv",
+		"body": [
+			"getenv(${1:variable})"
+		]
+	},
+	"StdIn constant": {
+		"prefix": "stdi",
+		"body": [
+			"StdIn"
+		]
+	},
+	"StdOut constant": {
+		"prefix": "stdo",
+		"body": [
+			"StdOut"
+		]
+	},
+	"StdErr constant": {
+		"prefix": "stde",
+		"body": [
+			"StdErr"
+		]
+	},
+	"SeekSet constant": {
+		"prefix": "seeks",
+		"body": [
+			"SeekSet"
+		]
+	},
+	"SeekCurrent constant": {
+		"prefix": "seekc",
+		"body": [
+			"SeekCurrent"
+		]
+	},
+	"SeekEnd constant": {
+		"prefix": "seeke",
+		"body": [
+			"SeekEnd"
+		]
+	},
+	"open core module function": {
+		"prefix": "open",
+		"body": [
+			"open(${1:filename}, ${2:mode})"
+		]
+	},
+	"close core module function": {
+		"prefix": "close",
+		"body": [
+			"close(${1:stream})"
+		]
+	},
+	"popen core module function": {
+		"prefix": "popen",
+		"body": [
+			"popen(${1:command}, ${2:mode})"
+		]
+	},
+	"pclose core module function": {
+		"prefix": "pclose",
+		"body": [
+			"pclose(${1:stream})"
+		]
+	},
+	"eof core module function": {
+		"prefix": "eof",
+		"body": [
+			"eof(${1:stream})"
+		]
+	},
+	"flush core module function": {
+		"prefix": "flush",
+		"body": [
+			"flush(${1:stream})"
+		]
+	},
+	"sync core module function": {
+		"prefix": "sync",
+		"body": [
+			"sync(${1:stream})"
+		]
+	},
+	"tell core module function": {
+		"prefix": "tell",
+		"body": [
+			"tell(${1:stream})"
+		]
+	},
+	"rewind core module function": {
+		"prefix": "rewind",
+		"body": [
+			"rewind(${1:stream})"
+		]
+	},
+	"seek core module function": {
+		"prefix": "seek",
+		"body": [
+			"seek(${1:stream}, ${2:offset}, ${3:whence})"
+		]
+	},
+	"read core module function": {
+		"prefix": "read",
+		"body": [
+			"read(${1:stream}, ${2:size})"
+		]
+	},
+	"write core module function": {
+		"prefix": "write",
+		"body": [
+			"write(${1:stream}, ${2:string})"
+		]
+	},
+	"readln core module function": {
+		"prefix": "readln",
+		"body": [
+			"readln(${1:stream})"
+		]
+	},
+	"writeln core module function": {
+		"prefix": "writeln",
+		"body": [
+			"writeln(${1:stream}, ${2:string})"
+		]
+	},
+	"hash core module function": {
+		"prefix": "hash",
+		"body": [
+			"hash(${1:string})"
+		]
+	},
+	"lower core module function": {
+		"prefix": "lower",
+		"body": [
+			"lower(${1:string})"
+		]
+	},
+	"upper core module function": {
+		"prefix": "upper",
+		"body": [
+			"upper(${1:string})"
+		]
+	},
+	"trim core module function": {
+		"prefix": "trim",
+		"body": [
+			"trim(${1:string})"
+		]
+	},
+	"starts_with core module function": {
+		"prefix": "starts",
+		"body": [
+			"starts_with(${1:string}, ${2:substring})"
+		]
+	},
+	"ends_with core module function": {
+		"prefix": "ends",
+		"body": [
+			"ends_with(${1:string}, ${2:substring})"
+		]
+	},
+	"new_array core module function": {
+		"prefix": "newa",
+		"body": [
+			"new_array(${1:capacity})"
+		]
+	},
+	"index_of core module function": {
+		"prefix": "index",
+		"body": [
+			"index_of(${1:array}, ${2:value})"
+		]
+	},
+	"min core module function": {
+		"prefix": "min",
+		"body": [
+			"min(${1:array})"
+		]
+	},
+	"max core module function": {
+		"prefix": "max",
+		"body": [
+			"max(${1:array})"
+		]
+	},
+	"sum core module function": {
+		"prefix": "sum",
+		"body": [
+			"sum(${1:array})"
+		]
+	}
+}

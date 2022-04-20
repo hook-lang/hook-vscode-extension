@@ -50,7 +50,7 @@
 	"chr built-in function": {
 		"prefix": "chr",
 		"body": [
-			"chr(${1:integer})"
+			"chr(${1:int})"
 		]
 	},
 	"hex built-in function": {
