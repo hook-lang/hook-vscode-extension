@@ -85,14 +85,14 @@
 			]
 		},
 		{
-			"match": "\\b(as|break|continue|del|do|else|fn|for|from|if|loop|match|mut|return|struct|use|val|while)\\b",
+			"match": "\\b(as|break|continue|del|do|else|fn|for|from|if|if!|loop|match|mut|return|struct|use|val|while|while!)\\b",
 			"name": "keyword.control.hook"
 		},		
 		{
 			"match": "(?<![^.]\\.|:)\\b(nil|false|true)\\b|(?<![.])\\.{3}(?!\\.)",
 			"name": "constant.language.hook"
 		},
-		{
+		{			
 			"match": "(?<![^.]\\.|:)\\b(print|println|type|to_bool|to_int|to_float|to_string|ord|chr|hex|bin|cap|len|is_empty|compare|slice|split|join|iter|valid|current|next|sleep|assert|panic)\\b(?=\\s*(?:[({\"']|\\[\\[))",
 			"name": "support.function.hook"
 		},

@@ -1,0 +1,66 @@
+
+chunk       ::= stmt* EOF
+
+stmt        ::= 'use' NAME ( 'as' NAME )? ';'
+              | 'use' '{' NAME ( ',' NAME )* '}' 'from' NAME ';'
+              | var_decl ';'
+              | assign_call ';'
+              | 'struct' NAME '{' ( NAME ( ',' NAME )* )? '}'
+              | 'fn' NAME '(' ( 'mut'? NAME ( ',' 'mut'? NAME )* )? ')'
+                ( '=>' expr | block )
+              | 'del' NAME subscr* '[' expr ']' ';'
+              | ( 'if' | 'if!' ) '(' expr ')' stmt ( 'else' stmt )?
+              | 'match' '(' expr ')' '{' ( expr '=>' stmt )+ ( '_' '=>' stmt )? '}'
+              | 'loop' stmt
+              | ( 'while' | 'while!' ) '(' expr ')' stmt
+              | 'do' stmt ( 'while' | 'while!' ) '(' expr ')' ';'
+              | 'for' '(' var_decl | assign_call? ';' expr? ';' assign_call? ')' stmt
+              | 'continue' ';'
+              | 'break' ';'
+              | 'return' expr? ';'
+              | block
+
+var_decl    ::= 'val' NAME '=' expr
+              | 'mut' NAME ( '=' expr )?
+              | ( 'val' | 'mut' ) '[' '_' | NAME ( ',' '_' | NAME )* ']' '=' expr
+              | ( 'val' | 'mut' ) '{' NAME ( ',' NAME )* '}' '=' expr
+
+assign_call ::= NAME subscr* ( '=' | '+=' | '-=' | '*=' | '/=' | '~/=' | '%=' ) expr
+              | NAME subscr* ( '++' | '--' )
+              | NAME subscr* '[' ']' '=' expr
+              | NAME subscr* subscr '=' expr
+              | NAME ( subscr | call )* call
+
+subscr      ::= '[' expr ']' | '.' NAME 
+
+call        ::= '(' ( expr ( ',' expr )* )? ')'
+
+block       ::= '{' stmt* '}'
+
+expr        ::= and_expr ( '||' and_expr )*
+
+and_expr    ::= equal_expr ( '&&' equal_expr )*
+
+equal_expr  ::= comp_expr ( ( '==' | '!=' ) comp_expr )*
+
+comp_expr   ::= range_expr ( ( '>' | '>=' | '<' | '<=' ) range_expr )*
+
+range_expr  ::= add_expr ( '..' add_expr )?
+
+add_expr    ::= mul_expr ( ( '+' | '-' ) mul_expr )*
+
+mul_expr    ::= unary_expr ( ( '*' | '/' | '~/' | '%' ) unary_expr )*
+
+unary_expr  ::= ( '-' | '!' ) unary_expr | prim_expr
+
+prim_expr   ::= 'nil' | 'false' | 'true' | INT | FLOAT | STRING
+              | '[' ( expr ( ',' expr )* )? ']'
+              | '{' ( NAME ':' expr ( ',' NAME ':' expr )* )? '}'
+              | 'struct' '{' ( NAME ( ',' NAME )* )? '}'
+              | 'fn' '(' ( 'mut'? NAME ( ',' 'mut'? NAME )* )? ')'
+                ( '=>' expr | block )
+              | ( 'if' | 'if!' ) '(' expr ')' expr 'else' expr
+              | 'match' '(' expr ')' '{' expr '=>' expr ( ',' expr '=>' expr )*
+                ',' '_' '=>' expr '}'
+              | NAME ( subscr | call )* ( '{' ( expr ( ',' expr )* )? '}' )?
+              | '(' expr ')'

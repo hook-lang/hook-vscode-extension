@@ -157,6 +157,30 @@
 			"if (${1:expression}) ${2:expression} else ${3:expression}"
 		]
 	},
+	"if! statement": {
+		"prefix": "if!",
+		"body": [
+			"if! (${1:expression}) {",
+			"  ${2:statement};",
+			"}"
+		]
+	},
+	"if!..else statement": {
+		"prefix": "if!el",
+		"body": [
+			"if! (${1:expression}) {",
+			"  ${2:statement};",
+			"} else {",
+			"  ${3:statement};",
+			"}"
+		]
+	},
+	"if! expression": {
+		"prefix": "if!e",
+		"body": [
+			"if! (${1:expression}) ${2:expression} else ${3:expression}"
+		]
+	},
 	"match statement": {
 		"prefix": "match",
 		"body": [
@@ -205,6 +229,22 @@
 			"do {",
 			"  ${1:statement};",
 			"} while (${2:expression});"
+		]
+	},
+	"while! statement": {
+		"prefix": "while!",
+		"body": [
+			"while! (${1:expression}) {",
+			"  ${2:statement};",
+			"}"
+		]
+	},
+	"do..while! statement": {
+		"prefix": "do!",
+		"body": [
+			"do {",
+			"  ${1:statement};",
+			"} while! (${2:expression});"
 		]
 	},
 	"for statement": {

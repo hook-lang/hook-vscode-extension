@@ -2,7 +2,7 @@
 	"Pi constant": {
 		"prefix": "pi",
 		"body": [
-			"Pi"
+			"PI"
 		]
 	},
 	"abs core module function": {
@@ -77,10 +77,28 @@
 			"sqrt(${1:value})"
 		]
 	},
+	"cbrt core module function": {
+		"prefix": "cbrt",
+		"body": [
+			"cbrt(${1:value})"
+		]
+	},
 	"log core module function": {
 		"prefix": "log",
 		"body": [
 			"log(${1:value})"
+		]
+	},
+	"log2 core module function": {
+		"prefix": "log2",
+		"body": [
+			"log2(${1:value})"
+		]
+	},
+	"log10 core module function": {
+		"prefix": "log10",
+		"body": [
+			"log10(${1:value})"
 		]
 	},
 	"exp core module function": {
@@ -95,10 +113,10 @@
 			"random()"
 		]
 	},
-	"ClocksPerSecond constant": {
+	"CLOCKS_PER_SEC constant": {
 		"prefix": "clocks",
 		"body": [
-			"ClocksPerSecond"
+			"CLOCKS_PER_SEC"
 		]
 	},
 	"clock core module function": {
@@ -125,40 +143,40 @@
 			"getenv(${1:variable})"
 		]
 	},
-	"StdIn constant": {
+	"stdin constant": {
 		"prefix": "stdi",
 		"body": [
-			"StdIn"
+			"stdin"
 		]
 	},
-	"StdOut constant": {
+	"stdout constant": {
 		"prefix": "stdo",
 		"body": [
-			"StdOut"
+			"stdout"
 		]
 	},
-	"StdErr constant": {
+	"stderr constant": {
 		"prefix": "stde",
 		"body": [
-			"StdErr"
+			"stderr"
 		]
 	},
-	"SeekSet constant": {
+	"SEEK_SET constant": {
 		"prefix": "seeks",
 		"body": [
-			"SeekSet"
+			"SEEK_SET"
 		]
 	},
-	"SeekCurrent constant": {
+	"SEEK_CUR constant": {
 		"prefix": "seekc",
 		"body": [
-			"SeekCurrent"
+			"SEEK_CUR"
 		]
 	},
-	"SeekEnd constant": {
+	"SEEK_END constant": {
 		"prefix": "seeke",
 		"body": [
-			"SeekEnd"
+			"SEEK_END"
 		]
 	},
 	"open core module function": {
@@ -279,6 +297,12 @@
 		"prefix": "ends",
 		"body": [
 			"ends_with(${1:string}, ${2:substring})"
+		]
+	},
+	"reverse core module function": {
+		"prefix": "rev",
+		"body": [
+			"reverse(${1:string})"
 		]
 	},
 	"new_array core module function": {

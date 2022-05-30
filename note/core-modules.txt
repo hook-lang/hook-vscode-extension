@@ -1,0 +1,75 @@
+
+math:
+
+  PI: float
+
+  abs(num: float) -> float
+  sin(num: float) -> float
+  cos(num: float) -> float
+  tan(num: float) -> float
+  asin(num: float) -> float
+  acos(num: float) -> float
+  atan(num: float) -> float
+  floor(num: float) -> int
+  ceil(num: float) -> int
+  round(num: float) -> int
+  pow(base: float, power: float) -> float
+  sqrt(num: float) -> float
+  cbrt(num: float) -> float
+  log(num: float) -> float
+  log2(num: float) -> float
+  log10(num: float) -> float
+  exp(num: float) -> float
+  random() -> float
+
+os:
+
+  CLOCKS_PER_SEC: float
+
+  clock() -> int
+  time() -> int
+  system(cmd: string) -> int
+  getenv(var: string) -> string
+
+io:
+
+  stdin: userdata
+  stdout: userdata
+  stderr: userdata
+
+  SEEK_SET: float
+  SEEK_CUR: float
+  SEEK_END: float
+
+  open(filename: string, mode: string) -> nil|userdata
+  close(stream: userdata) -> int
+  popen(command: string, mode: string) -> nil|userdata
+  pclose(stream: userdata) -> int
+  eof(stream: userdata) -> bool
+  flush(stream: userdata) -> int
+  sync(stream: userdata) -> bool
+  tell(stream: userdata) -> int
+  rewind(stream: userdata)
+  seek(stream: userdata, offset: int, whence: int) -> int
+  read(stream: userdata, size: int) -> nil|string
+  write(stream: userdata, str: string) -> nil|int
+  readln(stream: userdata) -> string
+  writeln(stream: userdata, str: string) -> nil|int
+
+strings:
+
+  hash(str: string) -> int
+  lower(str: string) -> string
+  upper(str: string) -> string
+  trim(str: string) -> string
+  starts_with(str1: string, str2: string) -> bool
+  ends_with(str1: string, str2: string) -> bool
+  reverse(str: string) -> string
+
+arrays:
+
+  new_array(min_capacity: int) -> array
+  index_of(arr: array, elem: value) -> int
+  min(arr: array) -> value
+  max(arr: array) -> value
+  sum(arr: array) -> float
