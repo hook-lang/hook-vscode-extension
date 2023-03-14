@@ -85,7 +85,7 @@
 			]
 		},
 		{
-			"match": "\\b(as|break|continue|del|do|else|fn|for|from|if|if!|loop|match|mut|return|struct|use|val|while|while!)\\b",
+			"match": "\\b(as|break|continue|del|do|else|fn|for|foreach|from|if|if!|import|in|let|loop|match|mut|return|struct|while|while!)\\b",
 			"name": "keyword.control.hook"
 		},		
 		{
@@ -93,7 +93,7 @@
 			"name": "constant.language.hook"
 		},
 		{			
-			"match": "(?<![^.]\\.|:)\\b(print|println|type|to_bool|to_int|to_float|to_string|ord|chr|hex|bin|cap|len|is_empty|compare|slice|split|join|iter|valid|current|next|sleep|assert|panic)\\b(?=\\s*(?:[({\"']|\\[\\[))",
+			"match": "(?<![^.]\\.|:)\\b(print|println|type|is_nil|is_bool|is_number|is_int|is_string|is_range|is_array|is_struct|is_instance|is_iterator|is_callable|is_userdata|is_object|is_comparable|is_iterable|to_bool|to_int|to_number|to_string|ord|chr|hex|bin|address|refcount|cap|len|is_empty|compare|split|join|iter|valid|current|next|sleep|assert|panic)\\b(?=\\s*(?:[({\"']|\\[\\[))",
 			"name": "support.function.hook"
 		},
 		{

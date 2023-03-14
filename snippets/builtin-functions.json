@@ -17,6 +17,96 @@
 			"type(${1:value})"
 		]
 	},
+	"is_nil built-in function": {
+		"prefix": "isn",
+		"body": [
+			"is_nil(${1:value})"
+		]
+	},
+	"is_bool built-in function": {
+		"prefix": "isb",
+		"body": [
+			"is_bool(${1:value})"
+		]
+	},
+	"is_number built-in function": {
+		"prefix": "isnum",
+		"body": [
+			"is_number(${1:value})"
+		]
+	},
+	"is_int built-in function": {
+		"prefix": "isi",
+		"body": [
+			"is_int(${1:value})"
+		]
+	},
+	"is_string built-in function": {
+		"prefix": "isstr",
+		"body": [
+			"is_string(${1:value})"
+		]
+	},
+	"is_range built-in function": {
+		"prefix": "isr",
+		"body": [
+			"is_range(${1:value})"
+		]
+	},
+	"is_array built-in function": {
+		"prefix": "isa",
+		"body": [
+			"is_array(${1:value})"
+		]
+	},
+	"is_struct built-in function": {
+		"prefix": "iss",
+		"body": [
+			"is_struct(${1:value})"
+		]
+	},
+	"is_instance built-in function": {
+		"prefix": "isinst",
+		"body": [
+			"is_instance(${1:value})"
+		]
+	},
+	"is_iterator built-in function": {
+		"prefix": "isit",
+		"body": [
+			"is_iterator(${1:value})"
+		]
+	},
+	"is_callable built-in function": {
+		"prefix": "isc",
+		"body": [
+			"is_callable(${1:value})"
+		]
+	},
+	"is_userdata built-in function": {
+		"prefix": "isu",
+		"body": [
+			"is_userdata(${1:value})"
+		]
+	},
+	"is_object built-in function": {
+		"prefix": "iso",
+		"body": [
+			"is_object(${1:value})"
+		]
+	},
+	"is_comparable built-in function": {
+		"prefix": "iscmp",
+		"body": [
+			"is_comparable(${1:value})"
+		]
+	},
+	"is_iterable built-in function": {
+		"prefix": "isiter",
+		"body": [
+			"is_iterable(${1:value})"
+		]
+	},
 	"to_bool built-in function": {
 		"prefix": "tob",
 		"body": [
@@ -29,10 +119,10 @@
 			"to_int(${1:value})"
 		]
 	},
-	"to_float built-in function": {
-		"prefix": "tof",
+	"to_number built-in function": {
+		"prefix": "ton",
 		"body": [
-			"to_float(${1:value})"
+			"to_number(${1:value})"
 		]
 	},
 	"to_string built-in function": {
@@ -65,6 +155,18 @@
 			"bin(${1:string})"
 		]
 	},
+	"address built-in function": {
+		"prefix": "addr",
+		"body": [
+			"address(${1:value})"
+		]
+	},
+	"refcount built-in function": {
+		"prefix": "refc",
+		"body": [
+			"refcount(${1:value})"
+		]
+	},
 	"cap built-in function": {
 		"prefix": "cap",
 		"body": [
@@ -87,12 +189,6 @@
 		"prefix": "compare",
 		"body": [
 			"compare(${1:value}, ${2:value})"
-		]
-	},
-	"slice built-in function": {
-		"prefix": "slice",
-		"body": [
-			"slice(${1:value}, ${2:start}, ${3:stop})"
 		]
 	},
 	"split built-in function": {

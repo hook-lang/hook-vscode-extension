@@ -1,68 +1,104 @@
 {
-	"use declaration": {
-		"prefix": "use",
+	"import declaration": {
+		"prefix": "import",
 		"body": [
-			"use ${1:name};"
+			"import ${1:name};"
 		]
 	},
-	"use..as declaration": {
-		"prefix": "usea",
+	"import..as declaration": {
+		"prefix": "importa",
 		"body": [
-			"use ${1:name} as ${2:name};"
+			"import ${1:name} as ${2:name};"
 		]
 	},
-	"destructured use declaration": {
-		"prefix": "use{",
+	"destructured import declaration": {
+		"prefix": "import{",
 		"body": [
-			"use { ${1:name} } from ${2:name};"
+			"import { ${1:name} } from ${2:name};"
 		]
 	},
-	"use math declaration": {
-		"prefix": "usem",
+	"import math declaration": {
+		"prefix": "importm",
 		"body": [
-			"use math;"
+			"import math;"
 		]
 	},
-	"use os declaration": {
-		"prefix": "useos",
+	"import os declaration": {
+		"prefix": "importos",
 		"body": [
-			"use os;"
+			"import os;"
 		]
 	},
-	"use io declaration": {
-		"prefix": "useio",
+	"import io declaration": {
+		"prefix": "importio",
 		"body": [
-			"use io;"
+			"import io;"
 		]
 	},
-	"use strings declaration": {
-		"prefix": "usestr",
+	"import numbers declaration": {
+		"prefix": "importnum",
 		"body": [
-			"use strings;"
+			"import numbers;"
+		]
+	},	
+	"import strings declaration": {
+		"prefix": "importstr",
+		"body": [
+			"import strings;"
 		]
 	},
-	"use arrays declaration": {
-		"prefix": "usearr",
+	"import arrays declaration": {
+		"prefix": "importarr",
 		"body": [
-			"use arrays;"
+			"import arrays;"
+		]
+	},
+	"import utf8 declaration": {
+		"prefix": "importu",
+		"body": [
+			"import utf8;"
+		]
+	},
+	"import regex declaration": {
+		"prefix": "importreg",
+		"body": [
+			"import regex;"
+		]
+	},
+	"import hashing declaration": {
+		"prefix": "importhash",
+		"body": [
+			"import hashing;"
+		]
+	},
+	"import encoding declaration": {
+		"prefix": "importenc",
+		"body": [
+			"import encoding;"
+		]
+	},
+	"import socket declaration": {
+		"prefix": "importsoc",
+		"body": [
+			"import socket;"
 		]
 	},
 	"constant declaration": {
-		"prefix": "val",
+		"prefix": "let",
 		"body": [
-			"val ${1:name} = ${2:expression};"
+			"let ${1:name} = ${2:expression};"
 		]
 	},
 	"unpacking to constant": {
-		"prefix": "val[",
+		"prefix": "let[",
 		"body": [
-			"val [ ${1:name} ] = ${2:expression};"
+			"let [ ${1:name} ] = ${2:expression};"
 		]
 	},
 	"destructuring to constant": {
-		"prefix": "val{",
+		"prefix": "let{",
 		"body": [
-			"val { ${1:name} } = ${2:expression};"
+			"let { ${1:name} } = ${2:expression};"
 		]
 	},
 	"variable declaration": {
@@ -108,9 +144,9 @@
 		]
 	},
 	"anonymous function": {
-		"prefix": "fn(",
+		"prefix": "|(",
 		"body": [
-			"fn (${1:param}) {",
+			"| ${1:param} | {",
 			"  ${2:statement};",
 			"}"
 		]
@@ -122,9 +158,9 @@
 		]
 	},
 	"anonymous arrow function": {
-		"prefix": "fn(=>",
+		"prefix": "|(=>",
 		"body": [
-			"fn (${1:param}) => ${2:expression}"
+			"| ${1:param} | => ${2:expression}"
 		]
 	},
 	"del statement": {
@@ -252,6 +288,14 @@
 		"body": [
 			"for (mut i = ${1:0}; i < ${2:n}; ${3:i++}) {",
 			"  ${4:statement};",
+			"}"
+		]
+	},
+	"foreach statement": {
+		"prefix": "foreach",
+		"body": [
+			"foreach (${1:name} in ${2:expression}) {",
+			"  ${3:statement};",
 			"}"
 		]
 	},

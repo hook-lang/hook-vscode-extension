@@ -3,7 +3,7 @@
 	"displayName": "Hook",
 	"description": "Visual Studio Code support for Hook Programming Language",
 	"icon": "images/hook-file-extension.png",
-	"version": "0.1.19",
+	"version": "0.1.20",
 	"publisher": "fabiosvm",
 	"engines": {
 		"vscode": "^1.14.0"

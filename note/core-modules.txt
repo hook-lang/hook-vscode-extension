@@ -1,35 +1,34 @@
 
 math:
 
-  PI: float
-
-  abs(num: float) -> float
-  sin(num: float) -> float
-  cos(num: float) -> float
-  tan(num: float) -> float
-  asin(num: float) -> float
-  acos(num: float) -> float
-  atan(num: float) -> float
-  floor(num: float) -> int
-  ceil(num: float) -> int
-  round(num: float) -> int
-  pow(base: float, power: float) -> float
-  sqrt(num: float) -> float
-  cbrt(num: float) -> float
-  log(num: float) -> float
-  log2(num: float) -> float
-  log10(num: float) -> float
-  exp(num: float) -> float
-  random() -> float
+  abs(num: number) -> number
+  sin(num: number) -> number
+  cos(num: number) -> number
+  tan(num: number) -> number
+  asin(num: number) -> number
+  acos(num: number) -> number
+  atan(num: number) -> number
+  floor(num: number) -> number
+  ceil(num: number) -> number
+  round(num: number) -> number
+  pow(base: number, power: number) -> number
+  sqrt(num: number) -> number
+  cbrt(num: number) -> number
+  log(num: number) -> number
+  log2(num: number) -> number
+  log10(num: number) -> number
+  exp(num: number) -> number
+  random() -> number
 
 os:
 
-  CLOCKS_PER_SEC: float
+  CLOCKS_PER_SEC: number
 
-  clock() -> int
-  time() -> int
-  system(cmd: string) -> int
-  getenv(var: string) -> string
+  clock() -> number
+  time() -> number
+  system(cmd: string) -> number
+  getenv(str: string) -> string
+  name() -> string
 
 io:
 
@@ -37,28 +36,38 @@ io:
   stdout: userdata
   stderr: userdata
 
-  SEEK_SET: float
-  SEEK_CUR: float
-  SEEK_END: float
+  SEEK_SET: number
+  SEEK_CUR: number
+  SEEK_END: number
 
   open(filename: string, mode: string) -> nil|userdata
-  close(stream: userdata) -> int
+  close(stream: userdata) -> number
   popen(command: string, mode: string) -> nil|userdata
-  pclose(stream: userdata) -> int
+  pclose(stream: userdata) -> number
   eof(stream: userdata) -> bool
-  flush(stream: userdata) -> int
+  flush(stream: userdata) -> number
   sync(stream: userdata) -> bool
-  tell(stream: userdata) -> int
+  tell(stream: userdata) -> number
   rewind(stream: userdata)
-  seek(stream: userdata, offset: int, whence: int) -> int
-  read(stream: userdata, size: int) -> nil|string
-  write(stream: userdata, str: string) -> nil|int
+  seek(stream: userdata, offset: number, whence: number) -> number
+  read(stream: userdata, size: number) -> nil|string
+  write(stream: userdata, str: string) -> nil|number
   readln(stream: userdata) -> string
-  writeln(stream: userdata, str: string) -> nil|int
+  writeln(stream: userdata, str: string) -> nil|number
+
+numbers:
+
+  PI: number
+  TAU: number
+  LARGEST: number
+  SMALLEST: number
+  MAX_INTEGER: number
+  MIN_INTEGER: number
 
 strings:
 
-  hash(str: string) -> int
+  new_string(min_capacity: number) -> string
+  hash(str: string) -> number
   lower(str: string) -> string
   upper(str: string) -> string
   trim(str: string) -> string
@@ -68,8 +77,66 @@ strings:
 
 arrays:
 
-  new_array(min_capacity: int) -> array
-  index_of(arr: array, elem: value) -> int
-  min(arr: array) -> value
-  max(arr: array) -> value
-  sum(arr: array) -> float
+  new_array(min_capacity: number) -> array
+  index_of(arr: array, elem) -> number
+  min(arr: array) -> any
+  max(arr: array) -> any
+  sum(arr: array) -> number
+  avg(arr: array) -> number
+  reverse(arr: array) -> array
+  sort(arr: array) -> array
+
+utf8:
+
+  len(str: string) -> number
+  sub(str: string, start: number, end: number) -> string
+
+regex:
+
+  new(pattern: string) -> userdata
+  find(regex: userdata, str: string) -> nil|array
+  is_match(regex: userdata, str: string) -> bool
+
+hashing:
+
+  sha224(str: string) -> string
+  sha256(str: string) -> string
+  sha384(str: string) -> string
+  sha512(str: string) -> string
+  sha1(str: string) -> string
+  sha3(str: string) -> string
+  md5(str: string) -> string
+  ripemd160(str: string) -> string
+
+encoding:
+
+  base32_encode(str: string) -> string
+  base32_decode(str: string) -> string
+  base58_encode(str: string) -> string
+  base58_decode(str: string) -> string
+  base64_encode(str: string) -> string
+  base64_decode(str: string) -> string
+
+socket:
+
+  AF_INET: number
+  AF_INET6: number
+  SOCK_STREAM: number
+  SOCK_DGRAM: number
+  IPPROTO_TCP: number
+  IPPROTO_UDP: number
+  SOL_SOCKET: number
+  SO_REUSEADDR: number
+
+  new(domain: number, type: number, protocol: number) -> userdata
+  close(sock: userdata)
+  connect(sock: userdata, host: string, port: number)
+  accept(sock: userdata) -> nil|userdata
+  bind(sock: userdata, host: string, port: number)
+  listen(sock: userdata, backlog: number)
+  send(sock: userdata, str: string) -> number
+  recv(sock: userdata, size: number) -> nil|string
+  set_option(sock: userdata, level: number, option: number, value: number)
+  get_option(sock: userdata, level: number, option: number) -> number
+  set_block(sock: userdata)
+  set_nonblock(sock: userdata)

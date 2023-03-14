@@ -1,338 +1,632 @@
 {
-	"Pi constant": {
-		"prefix": "pi",
-		"body": [
-			"PI"
-		]
-	},
-	"abs core module function": {
+	"math.abs() core module function": {
 		"prefix": "abs",
 		"body": [
-			"abs(${1:value})"
+			"math.abs(${1:value})"
 		]
 	},
-	"sin core module function": {
+	"math.sin() core module function": {
 		"prefix": "sin",
 		"body": [
-			"sin(${1:value});"
+			"math.sin(${1:value});"
 		]
 	},
-	"cos core module function": {
+	"math.cos() core module function": {
 		"prefix": "cos",
 		"body": [
-			"cos(${1:value})"
+			"math.cos(${1:value})"
 		]
 	},
-	"tan core module function": {
+	"math.tan() core module function": {
 		"prefix": "tan",
 		"body": [
-			"tan(${1:value})"
+			"math.tan(${1:value})"
 		]
 	},
-	"asin core module function": {
+	"math.asin() core module function": {
 		"prefix": "asin",
 		"body": [
-			"asin(${1:value})"
+			"math.asin(${1:value})"
 		]
 	},
-	"acos core module function": {
+	"math.acos() core module function": {
 		"prefix": "acos",
 		"body": [
-			"acos(${1:value})"
+			"math.acos(${1:value})"
 		]
 	},
-	"atan core module function": {
+	"math.atan() core module function": {
 		"prefix": "atan",
 		"body": [
-			"atan(${1:value})"
+			"math.atan(${1:value})"
 		]
 	},
-	"floor core module function": {
+	"math.floor() core module function": {
 		"prefix": "flo",
 		"body": [
-			"floor(${1:float})"
+			"math.floor(${1:float})"
 		]
 	},
-	"ceil core module function": {
+	"math.ceil() core module function": {
 		"prefix": "cei",
 		"body": [
-			"ceil(${1:int})"
+			"math.ceil(${1:int})"
 		]
 	},
-	"round core module function": {
+	"math.round() core module function": {
 		"prefix": "rou",
 		"body": [
-			"round(${1:string})"
+			"math.round(${1:string})"
 		]
 	},
-	"pow core module function": {
+	"math.pow() core module function": {
 		"prefix": "pow",
 		"body": [
-			"pow(${1:base}, ${2:power})"
+			"math.pow(${1:base}, ${2:power})"
 		]
 	},
-	"sqrt core module function": {
+	"math.sqrt() core module function": {
 		"prefix": "sqrt",
 		"body": [
-			"sqrt(${1:value})"
+			"math.sqrt(${1:value})"
 		]
 	},
-	"cbrt core module function": {
+	"math.cbrt() core module function": {
 		"prefix": "cbrt",
 		"body": [
-			"cbrt(${1:value})"
+			"math.cbrt(${1:value})"
 		]
 	},
-	"log core module function": {
+	"math.log() core module function": {
 		"prefix": "log",
 		"body": [
-			"log(${1:value})"
+			"math.log(${1:value})"
 		]
 	},
-	"log2 core module function": {
+	"math.log2() core module function": {
 		"prefix": "log2",
 		"body": [
-			"log2(${1:value})"
+			"math.log2(${1:value})"
 		]
 	},
-	"log10 core module function": {
+	"math.log10() core module function": {
 		"prefix": "log10",
 		"body": [
-			"log10(${1:value})"
+			"math.log10(${1:value})"
 		]
 	},
-	"exp core module function": {
+	"math.exp() core module function": {
 		"prefix": "exp",
 		"body": [
-			"exp(${1:value})"
+			"math.exp(${1:value})"
 		]
 	},
-	"random core module function": {
+	"math.random() core module function": {
 		"prefix": "rand",
 		"body": [
-			"random()"
+			"math.random()"
 		]
 	},
-	"CLOCKS_PER_SEC constant": {
+	"os.CLOCKS_PER_SEC constant": {
 		"prefix": "clocks",
 		"body": [
-			"CLOCKS_PER_SEC"
+			"os.CLOCKS_PER_SEC"
 		]
 	},
-	"clock core module function": {
+	"os.clock() core module function": {
 		"prefix": "clo",
 		"body": [
-			"clock()"
+			"os.clock()"
 		]
 	},
-	"time core module function": {
+	"os.time() core module function": {
 		"prefix": "time",
 		"body": [
-			"time()"
+			"os.time()"
 		]
 	},
-	"system core module function": {
+	"os.system() core module function": {
 		"prefix": "sys",
 		"body": [
-			"system(${1:command})"
+			"os.system(${1:command})"
 		]
 	},
-	"getenv core module function": {
+	"os.getenv() core module function": {
 		"prefix": "getenv",
 		"body": [
-			"getenv(${1:variable})"
+			"os.getenv(${1:variable})"
 		]
 	},
-	"stdin constant": {
+	"os.name() core module function": {
+		"prefix": "name",
+		"body": [
+			"os.name()"
+		]
+	},
+	"io.stdin constant": {
 		"prefix": "stdi",
 		"body": [
-			"stdin"
+			"io.stdin"
 		]
 	},
-	"stdout constant": {
+	"io.stdout constant": {
 		"prefix": "stdo",
 		"body": [
-			"stdout"
+			"io.stdout"
 		]
 	},
-	"stderr constant": {
+	"io.stderr constant": {
 		"prefix": "stde",
 		"body": [
-			"stderr"
+			"io.stderr"
 		]
 	},
-	"SEEK_SET constant": {
+	"io.SEEK_SET constant": {
 		"prefix": "seeks",
 		"body": [
-			"SEEK_SET"
+			"io.SEEK_SET"
 		]
 	},
-	"SEEK_CUR constant": {
+	"io.SEEK_CUR constant": {
 		"prefix": "seekc",
 		"body": [
-			"SEEK_CUR"
+			"io.SEEK_CUR"
 		]
 	},
-	"SEEK_END constant": {
+	"io.SEEK_END constant": {
 		"prefix": "seeke",
 		"body": [
-			"SEEK_END"
+			"io.SEEK_END"
 		]
 	},
-	"open core module function": {
+	"io.open() core module function": {
 		"prefix": "open",
 		"body": [
-			"open(${1:filename}, ${2:mode})"
+			"io.open(${1:filename}, ${2:mode})"
 		]
 	},
-	"close core module function": {
+	"io.close() core module function": {
 		"prefix": "close",
 		"body": [
-			"close(${1:stream})"
+			"io.close(${1:stream})"
 		]
 	},
-	"popen core module function": {
+	"io.popen() core module function": {
 		"prefix": "popen",
 		"body": [
-			"popen(${1:command}, ${2:mode})"
+			"io.popen(${1:command}, ${2:mode})"
 		]
 	},
-	"pclose core module function": {
+	"io.pclose() core module function": {
 		"prefix": "pclose",
 		"body": [
-			"pclose(${1:stream})"
+			"io.pclose(${1:stream})"
 		]
 	},
-	"eof core module function": {
+	"io.eof() core module function": {
 		"prefix": "eof",
 		"body": [
-			"eof(${1:stream})"
+			"io.eof(${1:stream})"
 		]
 	},
-	"flush core module function": {
+	"io.flush() core module function": {
 		"prefix": "flush",
 		"body": [
-			"flush(${1:stream})"
+			"io.flush(${1:stream})"
 		]
 	},
-	"sync core module function": {
+	"io.sync() core module function": {
 		"prefix": "sync",
 		"body": [
-			"sync(${1:stream})"
+			"io.sync(${1:stream})"
 		]
 	},
-	"tell core module function": {
+	"io.tell() core module function": {
 		"prefix": "tell",
 		"body": [
-			"tell(${1:stream})"
+			"io.tell(${1:stream})"
 		]
 	},
-	"rewind core module function": {
+	"io.rewind() core module function": {
 		"prefix": "rewind",
 		"body": [
-			"rewind(${1:stream})"
+			"io.rewind(${1:stream})"
 		]
 	},
-	"seek core module function": {
+	"io.seek() core module function": {
 		"prefix": "seek",
 		"body": [
-			"seek(${1:stream}, ${2:offset}, ${3:whence})"
+			"io.seek(${1:stream}, ${2:offset}, ${3:whence})"
 		]
 	},
-	"read core module function": {
+	"io.read() core module function": {
 		"prefix": "read",
 		"body": [
-			"read(${1:stream}, ${2:size})"
+			"io.read(${1:stream}, ${2:size})"
 		]
 	},
-	"write core module function": {
+	"io.write() core module function": {
 		"prefix": "write",
 		"body": [
-			"write(${1:stream}, ${2:string})"
+			"io.write(${1:stream}, ${2:string})"
 		]
 	},
-	"readln core module function": {
+	"io.readln() core module function": {
 		"prefix": "readln",
 		"body": [
-			"readln(${1:stream})"
+			"io.readln(${1:stream})"
 		]
 	},
-	"writeln core module function": {
+	"io.writeln() core module function": {
 		"prefix": "writeln",
 		"body": [
-			"writeln(${1:stream}, ${2:string})"
+			"io.writeln(${1:stream}, ${2:string})"
 		]
 	},
-	"hash core module function": {
+	"numbers.PI constant": {
+		"prefix": "pi",
+		"body": [
+			"numbers.PI"
+		]
+	},
+	"numbers.TAU constant": {
+		"prefix": "tau",
+		"body": [
+			"numbers.TAU"
+		]
+	},
+	"numbers.LARGEST constant": {
+		"prefix": "large",
+		"body": [
+			"numbers.LARGEST"
+		]
+	},
+	"numbers.SMALLEST constant": {
+		"prefix": "small",
+		"body": [
+			"numbers.SMALLEST"
+		]
+	},
+	"numbers.MAX_INTEGER constant": {
+		"prefix": "maxi",
+		"body": [
+			"numbers.MAX_INTEGER"
+		]
+	},
+	"numbers.MIN_INTEGER constant": {
+		"prefix": "mini",
+		"body": [
+			"numbers.MIN_INTEGER"
+		]
+	},
+	"strings.new_string() core module function": {
+		"prefix": "news",
+		"body": [
+			"strings.new_string((${1:capacity}))"
+		]
+	},
+	"strings.hash() core module function": {
 		"prefix": "hash",
 		"body": [
-			"hash(${1:string})"
+			"strings.hash(${1:string})"
 		]
 	},
-	"lower core module function": {
+	"strings.lower() core module function": {
 		"prefix": "lower",
 		"body": [
-			"lower(${1:string})"
+			"strings.lower(${1:string})"
 		]
 	},
-	"upper core module function": {
+	"strings.upper() core module function": {
 		"prefix": "upper",
 		"body": [
-			"upper(${1:string})"
+			"strings.upper(${1:string})"
 		]
 	},
-	"trim core module function": {
+	"strings.trim() core module function": {
 		"prefix": "trim",
 		"body": [
-			"trim(${1:string})"
+			"strings.trim(${1:string})"
 		]
 	},
-	"starts_with core module function": {
+	"strings.starts_with() core module function": {
 		"prefix": "starts",
 		"body": [
-			"starts_with(${1:string}, ${2:substring})"
+			"strings.starts_with(${1:string}, ${2:substring})"
 		]
 	},
-	"ends_with core module function": {
+	"strings.ends_with() core module function": {
 		"prefix": "ends",
 		"body": [
-			"ends_with(${1:string}, ${2:substring})"
+			"strings.ends_with(${1:string}, ${2:substring})"
 		]
 	},
-	"reverse core module function": {
-		"prefix": "rev",
+	"strings.reverse() core module function": {
+		"prefix": "srev",
 		"body": [
-			"reverse(${1:string})"
+			"strings.reverse(${1:string})"
 		]
 	},
-	"new_array core module function": {
+	"arrays.new_array() core module function": {
 		"prefix": "newa",
 		"body": [
-			"new_array(${1:capacity})"
+			"arrays.new_array(${1:capacity})"
 		]
 	},
-	"index_of core module function": {
+	"arrays.index_of() core module function": {
 		"prefix": "index",
 		"body": [
-			"index_of(${1:array}, ${2:value})"
+			"arrays.index_of(${1:array}, ${2:value})"
 		]
 	},
-	"min core module function": {
+	"arrays.min() core module function": {
 		"prefix": "min",
 		"body": [
-			"min(${1:array})"
+			"arrays.min(${1:array})"
 		]
 	},
-	"max core module function": {
+	"arrays.max() core module function": {
 		"prefix": "max",
 		"body": [
-			"max(${1:array})"
+			"arrays.max(${1:array})"
 		]
 	},
-	"sum core module function": {
+	"arrays.sum() core module function": {
 		"prefix": "sum",
 		"body": [
-			"sum(${1:array})"
+			"arrays.sum(${1:array})"
+		]
+	},
+	"arrays.avg() core module function": {
+		"prefix": "avg",
+		"body": [
+			"arrays.avg(${1:array})"
+		]
+	},
+	"arrays.reverse() core module function": {
+		"prefix": "arev",
+		"body": [
+			"arrays.reverse(${1:array})"
+		]
+	},
+	"arrays.sort() core module function": {
+		"prefix": "sort",
+		"body": [
+			"arrays.sort(${1:array})"
+		]
+	},
+	"utf8.len() core module function": {
+		"prefix": "len",
+		"body": [
+			"utf8.len(${1:string})"
+		]
+	},
+	"utf8.sub() core module function": {
+		"prefix": "sub",
+		"body": [
+			"utf8.sub(${1:string})"
+		]
+	},
+	"regex.new() core module function": {
+		"prefix": "rnew",
+		"body": [
+			"regex.new(${1:pattern})"
+		]
+	},
+	"regex.find() core module function": {
+		"prefix": "rfind",
+		"body": [
+			"regex.find(${1:regex}, ${2:string})"
+		]
+	},
+	"regex.is_match() core module function": {
+		"prefix": "rismatch",
+		"body": [
+			"regex.is_match(${1:regex}, ${2:string})"
+		]
+	},
+	"hashing.sha224() core module function": {
+		"prefix": "sha224",
+		"body": [
+			"hashing.sha224(${1:string})"
+		]
+	},
+	"hashing.sha256() core module function": {
+		"prefix": "sha256",
+		"body": [
+			"hashing.sha256(${1:string})"
+		]
+	},
+	"hashing.sha384() core module function": {
+		"prefix": "sha384",
+		"body": [
+			"hashing.sha384(${1:string})"
+		]
+	},
+	"hashing.sha512() core module function": {
+		"prefix": "sha512",
+		"body": [
+			"hashing.sha512(${1:string})"
+		]
+	},
+	"hashing.sha1() core module function": {
+		"prefix": "sha1",
+		"body": [
+			"hashing.sha1(${1:string})"
+		]
+	},
+	"hashing.sha3() core module function": {
+		"prefix": "sha3",
+		"body": [
+			"hashing.sha3(${1:string})"
+		]
+	},
+	"hashing.md5() core module function": {
+		"prefix": "md5",
+		"body": [
+			"hashing.md5(${1:string})"
+		]
+	},
+	"hashing.ripemd160() core module function": {
+		"prefix": "ripemd160",
+		"body": [
+			"hashing.ripemd160(${1:string})"
+		]
+	},
+	"encoding.base32_encode() core module function": {
+		"prefix": "base32e",
+		"body": [
+			"encoding.base32_encode(${1:string})"
+		]
+	},
+	"encoding.base32_decode() core module function": {
+		"prefix": "base32d",
+		"body": [
+			"encoding.base32_decode(${1:string})"
+		]
+	},
+	"encoding.base58_encode() core module function": {
+		"prefix": "base58e",
+		"body": [
+			"encoding.base58_encode(${1:string})"
+		]
+	},
+	"encoding.base58_decode() core module function": {
+		"prefix": "base58d",
+		"body": [
+			"encoding.base58_decode(${1:string})"
+		]
+	},
+	"encoding.base64_encode() core module function": {
+		"prefix": "base64e",
+		"body": [
+			"encoding.base64_encode(${1:string})"
+		]
+	},
+	"encoding.base64_decode() core module function": {
+		"prefix": "base64d",
+		"body": [
+			"encoding.base64_decode(${1:string})"
+		]
+	},
+	"socket.AF_INET constant": {
+		"prefix": "afinet",
+		"body": [
+			"socket.AF_INET"
+		]
+	},
+	"socket.AF_INET6 constant": {
+		"prefix": "afinet6",
+		"body": [
+			"socket.AF_INET6"
+		]
+	},
+	"socket.SOCK_STREAM constant": {
+		"prefix": "socstream",
+		"body": [
+			"socket.SOCK_STREAM"
+		]
+	},
+	"socket.SOCK_DGRAM constant": {
+		"prefix": "socdgram",
+		"body": [
+			"socket.SOCK_DGRAM"
+		]
+	},
+	"socket.IPPROTO_TCP constant": {
+		"prefix": "iptcp",
+		"body": [
+			"socket.IPPROTO_TCP"
+		]
+	},
+	"socket.IPPROTO_UDP constant": {
+		"prefix": "ipudp",
+		"body": [
+			"socket.IPPROTO_UDP"
+		]
+	},
+	"socket.SOL_SOCKET constant": {
+		"prefix": "solsocket",
+		"body": [
+			"socket.SOL_SOCKET"
+		]
+	},
+	"socket.SO_REUSEADDR constant": {
+		"prefix": "soreuseaddr",
+		"body": [
+			"socket.SO_REUSEADDR"
+		]
+	},
+	"socket.new() core module function": {
+		"prefix": "snew",
+		"body": [
+			"socket.new(${1:domain}, ${2:type}, ${3:protocol})"
+		]
+	},
+	"socket.close() core module function": {
+		"prefix": "sclose",
+		"body": [
+			"socket.close(${1:socket})"
+		]
+	},
+	"socket.connect() core module function": {
+		"prefix": "sconnect",
+		"body": [
+			"socket.connect(${1:socket}, ${2:host}, ${3:port})"
+		]
+	},
+	"socket.accept() core module function": {
+		"prefix": "saccept",
+		"body": [
+			"socket.accept(${1:socket})"
+		]
+	},
+	"socket.bind() core module function": {
+		"prefix": "sbind",
+		"body": [
+			"socket.bind(${1:socket}, ${2:host}, ${3:port})"
+		]
+	},
+	"socket.listen() core module function": {
+		"prefix": "slisten",
+		"body": [
+			"socket.listen(${1:socket}, ${2:backlog})"
+		]
+	},
+	"socket.send() core module function": {
+		"prefix": "ssend",
+		"body": [
+			"socket.send(${1:socket}, ${2:string})"
+		]
+	},
+	"socket.recv() core module function": {
+		"prefix": "srecv",
+		"body": [
+			"socket.recv(${1:socket}, ${2:size})"
+		]
+	},
+	"socket.set_option() core module function": {
+		"prefix": "ssetopt",
+		"body": [
+			"socket.set_option(${1:socket}, ${2:level}, ${3:option}, ${4:value})"
+		]
+	},
+	"socket.get_option() core module function": {
+		"prefix": "sgetopt",
+		"body": [
+			"socket.get_option(${1:socket}, ${2:level}, ${3:option})"
+		]
+	},
+	"socket.set_block() core module function": {
+		"prefix": "ssetblock",
+		"body": [
+			"socket.set_block(${1:socket})"
+		]
+	},
+	"socket.set_nonblock() core module function": {
+		"prefix": "ssetnonblock",
+		"body": [
+			"socket.set_nonblock(${1:socket})"
 		]
 	}
 }
