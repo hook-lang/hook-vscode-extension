@@ -18,7 +18,6 @@ math:
   log2(num: number) -> number
   log10(num: number) -> number
   exp(num: number) -> number
-  random() -> number
 
 os:
 
@@ -64,9 +63,13 @@ numbers:
   MAX_INTEGER: number
   MIN_INTEGER: number
 
+  srand(seed: number)
+  rand() -> number
+
 strings:
 
   new_string(min_capacity: number) -> string
+  repeat(str: string, count: number) -> string
   hash(str: string) -> number
   lower(str: string) -> string
   upper(str: string) -> string
@@ -78,6 +81,7 @@ strings:
 arrays:
 
   new_array(min_capacity: number) -> array
+  fill(elem: any, length: number) -> array
   index_of(arr: array, elem) -> number
   min(arr: array) -> any
   max(arr: array) -> any

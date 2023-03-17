@@ -101,12 +101,6 @@
 			"math.exp(${1:value})"
 		]
 	},
-	"math.random() core module function": {
-		"prefix": "rand",
-		"body": [
-			"math.random()"
-		]
-	},
 	"os.CLOCKS_PER_SEC constant": {
 		"prefix": "clocks",
 		"body": [
@@ -299,10 +293,28 @@
 			"numbers.MIN_INTEGER"
 		]
 	},
+	"numbers.srand() core module function": {
+		"prefix": "srand",
+		"body": [
+			"numbers.srand()"
+		]
+	},
+	"numbers.rand() core module function": {
+		"prefix": "rand",
+		"body": [
+			"numbers.rand()"
+		]
+	},
 	"strings.new_string() core module function": {
 		"prefix": "news",
 		"body": [
 			"strings.new_string((${1:capacity}))"
+		]
+	},
+	"strings.repeat() core module function": {
+		"prefix": "repeat",
+		"body": [
+			"strings.repeat((${1:string}, ${2:count}))"
 		]
 	},
 	"strings.hash() core module function": {
@@ -351,6 +363,12 @@
 		"prefix": "newa",
 		"body": [
 			"arrays.new_array(${1:capacity})"
+		]
+	},
+	"arrays.fill() core module function": {
+		"prefix": "fill",
+		"body": [
+			"arrays.fill(${1:element}, ${2:length})"
 		]
 	},
 	"arrays.index_of() core module function": {
