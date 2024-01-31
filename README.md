@@ -7,7 +7,7 @@ Visual Studio Code support for Hook Programming Language.
 
 Hook is an imperative, cross-platform, dynamically typed scripting language based on the mutable value semantics approach.
 
-See more about Hook on [GitHub](https://github.com/fabiosvm/hook-lang).
+See more about Hook on [GitHub](https://github.com/hook-lang/hook).
 
 ## Features
 
@@ -25,4 +25,4 @@ This extension provides the following features:
 ## License
 
 This project is released under [MIT](https://choosealicense.com/licenses/mit/) license.
-See [LICENSE](https://github.com/fabiosvm/hook/blob/main/LICENSE) for more details.
+See [LICENSE](https://github.com/hook-lang/hook/blob/main/LICENSE) for more details.
