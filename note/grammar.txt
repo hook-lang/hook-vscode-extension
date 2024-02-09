@@ -1,78 +1,120 @@
 
-chunk       ::= stmt* EOF
+chunk                ::= stmt* EOF
 
-stmt        ::= 'import' NAME ( 'as' NAME )? ';'
-              | 'import' '{' NAME ( ',' NAME )* '}' 'from' NAME ';'
-              | var_decl ';'
-              | assign_call ';'
-              | 'struct' NAME '{' ( STRING | NAME ( ',' STRING | NAME )* )? '}'
-              | 'fn' NAME '(' ( 'mut'? NAME ( ',' 'mut'? NAME )* )? ')'
-                ( '=>' expr | block )
-              | 'del' NAME subscr* '[' expr ']' ';'
-              | ( 'if' | 'if!' ) '(' expr ')' stmt ( 'else' stmt )?
-              | 'match' '(' expr ')' '{' ( expr '=>' stmt )+ ( '_' '=>' stmt )? '}'
-              | 'loop' stmt
-              | ( 'while' | 'while!' ) '(' expr ')' stmt
-              | 'do' stmt ( 'while' | 'while!' ) '(' expr ')' ';'
-              | 'for' '(' var_decl | assign_call? ';' expr? ';' assign_call? ')' stmt
-              | 'foreach' '(' NAME 'in' expr ')' stmt
-              | 'continue' ';'
-              | 'break' ';'
-              | 'return' expr? ';'
-              | block
+stmt                 ::= import_stmt
+                       | var_decl ';'
+                       | assign_call ';'
+                       | struct_decl
+                       | fn_decl
+                       | del_stmt
+                       | if_stmt
+                       | match_stmt
+                       | loop_stmt
+                       | while_stmt
+                       | for_stmt
+                       | break_stmt
+                       | return_stmt
+                       | block
 
-var_decl    ::= 'let' NAME '=' expr
-              | 'mut' NAME ( '=' expr )?
-              | ( 'let' | 'mut' ) '[' '_' | NAME ( ',' '_' | NAME )* ']' '=' expr
-              | ( 'let' | 'mut' ) '{' NAME ( ',' NAME )* '}' '=' expr
+import_stmt          ::= 'import' NAME ( 'as' NAME )? ';'
+                       | 'import' STRING 'as' NAME ';'
+                       | 'import' '{' NAME ( ',' NAME )* '}' 'from' ( NAME | STRING ) ';'
 
-assign_call ::= NAME subscr* assign_op expr
-              | NAME subscr* ( '++' | '--' )
-              | NAME subscr* '[' ']' '=' expr
-              | NAME subscr* subscr '=' expr
-              | NAME ( subscr | call )* call
+var_decl             ::= 'let' NAME '=' expr
+                       | 'var' NAME ( '=' expr )?
+                       | ( 'let' | 'var' ) '[' '_' | NAME ( ',' '_' | NAME )* ']' '=' expr
+                       | ( 'let' | 'var' ) '{' NAME ( ',' NAME )* '}' '=' expr
 
-assign_op   ::= '=' | '|=' | '^=' | '&=' | '<<=' | '>>=' 
-              | '+=' | '-=' | '*=' | '/=' | '~/=' | '%='
+assign_call          ::= NAME subsc* assign_op expr
+                       | NAME subsc* ( '++' | '--' )
+                       | NAME subsc* '[' ']' '=' expr
+                       | NAME subsc* subsc '=' expr
+                       | NAME ( subsc | call )* call
 
-subscr      ::= '[' expr ']' | '.' NAME
+struct_decl          ::= 'struct' NAME '{' ( string | NAME ( ',' string | NAME )* )? '}'
 
-call        ::= '(' ( expr ( ',' expr )* )? ')'
+fn_decl              ::= 'fn' NAME '(' ( NAME ( ',' NAME )* )? ')' ( '=>' expr ";" | block )
 
-block       ::= '{' stmt* '}'
+del_stmt             ::= 'del' NAME subsc* '[' expr ']' ';'
 
-expr        ::= and_expr ( '||' and_expr )*
+if_stmt              ::= ( 'if' | 'if!' ) '(' ( var_decl ';' )? expr ')'
+                         stmt ( 'else' stmt )?
 
-and_expr    ::= equal_expr ( '&&' equal_expr )*
+match_stmt           ::= 'match' '(' ( var_decl ';' )? expr ')'
+                         '{' ( expr '=>' stmt )+ ( '_' '=>' stmt )? '}'
 
-equal_expr  ::= comp_expr ( ( '==' | '!=' ) comp_expr )*
+loop_stmt            ::= 'loop' stmt
 
-comp_expr   ::= bor_expr ( ( '>' | '>=' | '<' | '<=' ) bor_expr )*
+while_stmt           ::= ( 'while' | 'while!' ) '(' expr ')' stmt
+                       | 'do' stmt ( 'while' | 'while!' ) '(' expr ')' ';'
 
-bor_expr    ::= bxor_expr ( '|' bxor_expr )*
+for_stmt             ::= 'for' '(' ( var_decl | assign_call )? ';' expr?
+                         ';' assign_call? ')' stmt
+                       | 'foreach' '(' NAME 'in' expr ')' stmt
 
-bxor_expr   ::= band_expr ( '^' band_expr )*
+break_stmt           ::= ( 'break' | 'continue' ) ';'
 
-band_expr   ::= shift_expr ( '&' shift_expr )*
+return_stmt          ::= 'return' expr? ';'
 
-shift_expr  ::= range_expr ( ( '<<' | '>>' ) range_expr )*
+block                ::= '{' stmt* '}'
 
-range_expr  ::= add_expr ( '..' add_expr )?
+assign_op            ::= '=' | '|=' | '^=' | '&=' | '<<=' | '>>=' 
+                       | '+=' | '-=' | '*=' | '/=' | '~/=' | '%='
 
-add_expr    ::= mul_expr ( ( '+' | '-' ) mul_expr )*
+subsc                ::= '[' expr ']' | '.' NAME
 
-mul_expr    ::= unary_expr ( ( '*' | '/' | '~/' | '%' ) unary_expr )*
+call                 ::= '(' ( expr ( ',' expr )* )? ')'
 
-unary_expr  ::= ( '-' | '!' | '~' ) unary_expr | prim_expr
+expr                 ::= and_expr ( '||' and_expr )*
 
-prim_expr   ::= 'nil' | 'false' | 'true' | INT | FLOAT | STRING
-              | '[' ( expr ( ',' expr )* )? ']'
-              | '{' ( STRING | NAME ':' expr ( ',' STRING | NAME ':' expr )* )? '}'
-              | 'struct' '{' ( STRING | NAME ( ',' STRING | NAME )* )? '}'
-              | '|' ( 'mut'? NAME ( ',' 'mut'? NAME )* )? '|' ( '=>' expr | block )
-              | '||' ( '=>' expr | block )
-              | ( 'if' | 'if!' ) '(' expr ')' expr 'else' expr
-              | 'match' '(' expr ')' '{' expr '=>' expr ( ',' expr '=>' expr )*
-                ',' '_' '=>' expr '}'
-              | NAME ( subscr | call )* ( '{' ( expr ( ',' expr )* )? '}' )?
-              | '(' expr ')'
+and_expr             ::= equal_expr ( '&&' equal_expr )*
+
+equal_expr           ::= comp_expr ( ( '==' | '!=' ) comp_expr )*
+
+comp_expr            ::= bor_expr ( ( '>' | '>=' | '<' | '<=' ) bor_expr )*
+
+bor_expr             ::= bxor_expr ( '|' bxor_expr )*
+
+bxor_expr            ::= band_expr ( '^' band_expr )*
+
+band_expr            ::= shift_expr ( '&' shift_expr )*
+
+shift_expr           ::= range_expr ( ( '<<' | '>>' ) range_expr )*
+
+range_expr           ::= add_expr ( '..' add_expr )?
+
+add_expr             ::= mul_expr ( ( '+' | '-' ) mul_expr )*
+
+mul_expr             ::= unary_expr ( ( '*' | '/' | '~/' | '%' ) unary_expr )*
+
+unary_expr           ::= ( '-' | '!' | '~' ) unary_expr | primary_expr
+
+primary_expr         ::= literal
+                       | array_constructor
+                       | struct_constructor
+                       | anonymous_struct
+                       | anonymous_fn
+                       | if_expr
+                       | match_expr
+                       | subsc_call
+                       | group_expr
+
+literal              ::= 'nil' | 'false' | 'true' | number | string
+
+array_constructor    ::= '[' ( expr ( ',' expr )* )? ']'
+
+struct_constructor   ::= '{' ( string | NAME ':' expr ( ',' string | NAME ':' expr )* )? '}'
+
+anonymous_struct     ::= 'struct' '{' ( string | NAME ( ',' string | NAME )* )? '}'
+
+anonymous_fn         ::= '|' ( NAME ( ',' NAME )* )? '|' ( '=>' expr | block )
+                       | '||' ( '=>' expr | block )
+
+if_expr              ::= ( 'if' | 'if!' ) '(' expr ')' expr 'else' expr
+
+match_expr           ::= 'match' '(' expr ')' '{' expr '=>' expr ( ',' expr '=>' expr )*
+                         ',' '_' '=>' expr '}'
+
+subsc_call           ::= NAME ( subsc | call )* ( '{' ( expr ( ',' expr )* )? '}' )?
+
+group_expr           ::= '(' expr ')'

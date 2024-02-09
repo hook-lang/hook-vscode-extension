@@ -85,7 +85,7 @@
 			]
 		},
 		{
-			"match": "\\b(as|break|continue|del|do|else|fn|for|foreach|from|if|if!|import|in|let|loop|match|mut|return|struct|while|while!)\\b",
+			"match": "\\b(as|break|continue|del|do|else|fn|for|foreach|from|if|if!|import|in|let|loop|match|return|struct|var|while|while!)\\b",
 			"name": "keyword.control.hook"
 		},		
 		{
